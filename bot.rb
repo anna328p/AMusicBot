@@ -257,6 +257,8 @@ end
 
 bot.run true
 
+bot.listening = '~help for help'
+
 bot.servers.each do |id, server|
   $queues[server.id] = Queue.new
 end
@@ -289,9 +291,11 @@ while buf = Readline.readline('% ', true)
   if s.start_with? 'quit', 'stop'
     bot.stop
     exit
-  elsif s.start_with? 'r'
+  elsif s.start_with? 'restart' || s == 'rs'
     bot.stop
     exec 'ruby', $PROGRAM_NAME
+  elsif s.start_with? 'reload'
+    $config = YAML.load File.read 'config.yml' || {}
   elsif s.start_with? 'irb'
     binding.irb
   elsif s == ''
