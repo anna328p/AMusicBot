@@ -276,6 +276,7 @@ $queues.each do |id, q|
         $np[id] = nil
         if q.empty?
           v.destroy
+          v = nil
           break
         end
       end
