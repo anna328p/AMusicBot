@@ -13,3 +13,5 @@ db/database.sqlite3
 
 package-lock.json
 node_modules
+
+config.yml
