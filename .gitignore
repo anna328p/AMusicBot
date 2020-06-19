@@ -15,3 +15,5 @@ package-lock.json
 node_modules
 
 config.yml
+yt-client-secret.json
+yt-credentials.yml

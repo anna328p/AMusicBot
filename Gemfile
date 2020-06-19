@@ -16,6 +16,7 @@ group :default do
   gem 'dotenv', require: 'dotenv/load'
 
   gem 'youtube-dl.rb'
+  gem 'google-api-client', require: ['google/apis', 'google/apis/youtube_v3', 'googleauth', 'googleauth/stores/file_token_store']
 
   gem 'log4r'
 end
