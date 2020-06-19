@@ -215,10 +215,10 @@ bot.command :volume, {
 } do |event, vol_str|
   log_command(bot, :volume, event, [vol_str])
 
-  vol = vol_str.to_i / 100.0
+  vol = vol_str.to_f
   
-  if vol <= 1
-    vol *= 100
+  if vol > 1
+    vol /= 100.0
   end
 
   bot.voice(event.server).volume = vol
