@@ -94,7 +94,6 @@ bot = Discordrb::Commands::CommandBot.new(
   fancy_log: true,
   ignore_bots: true,
   no_permission_message: 'You are not allowed to do that',
-  command_doesnt_exist_message: 'Invalid command.'
 )
 
 # Play queues
